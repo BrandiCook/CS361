@@ -38,3 +38,4 @@ print(translated_text.text)
 # I had to add encoding = utf-8 for it to work with certain languages, like Japanese for example
 with open('response.txt', 'w', encoding="utf-8") as f:
     f.write(translated_text.text)
+
