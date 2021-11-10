@@ -35,5 +35,6 @@ translated_text = translator.translate(text_to_translate, dest="es")
 print(translated_text.text)
 
 # write translation to the response.txt
-with open('response.txt', 'w') as f:
+# I had to add encoding = utf-8 for it to work with certain languages, like Japanese for example
+with open('response.txt', 'w', encoding="utf-8") as f:
     f.write(translated_text.text)
