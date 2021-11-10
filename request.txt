@@ -1,2 +1,2 @@
-This is example of text to be translated. Here I am, typing a sentence that you will then translate into
+This is example of text to be translated. Here I am, typing a sentence that will then be translated into
 whatever desired language. The quick brown fox jumps over the lazy dog
