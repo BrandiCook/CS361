@@ -24,7 +24,7 @@ print(result.text)
 request_file = "request.txt"
 response_file = "response.txt"
 
-
+# Added to make it run continuously
 while True:
     # opens the txt file
     f = open("request.txt", 'r')
@@ -50,6 +50,6 @@ while True:
 
     f.close()
     a.close()
-
+    # translates again
     sleep(20)
 
