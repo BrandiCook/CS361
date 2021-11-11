@@ -1,1 +1,3 @@
-This is where the translated text will be written to
+Este es un ejemplo de texto a traducir. Aquí estoy, escribiendo una oración que luego se traducirá al
+cualquier idioma deseado. Borre este archivo y agregue lo que desee.
+El rápido zorro marrón salta sobre el perro perezoso.

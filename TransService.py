@@ -1,4 +1,5 @@
 from googletrans import Translator
+from time import sleep
 
 # *** PLEASE NOTE THE BELOW INFORMATION ON HOW TO INSTALL ***
 # "pip install googletrans==3.1.0a0" is required before running this service
@@ -23,25 +24,32 @@ print(result.text)
 request_file = "request.txt"
 response_file = "response.txt"
 
-# opens the txt file
-f = open("request.txt", 'r')
-a = open("response.txt", 'a')
-if f.mode == 'r':
-    text_to_translate = f.read()
-    # Prints the text that will eventually be translated
-    print(text_to_translate)
 
-translator = Translator()
+while True:
+    # opens the txt file
+    f = open("request.txt", 'r')
+    a = open("response.txt", 'a')
+    if f.mode == 'r':
+        text_to_translate = f.read()
+        # Prints the text that will eventually be translated
+        print(text_to_translate)
 
-# translate contents of request.txt
-translated_text = translator.translate(text_to_translate, dest="es")
-# Prints the translated text
-print(translated_text.text)
+    translator = Translator()
 
-# More supported languages can be found at https://py-googletrans.readthedocs.io/en/latest/, just scroll down!
+    # translate contents of request.txt
+    translated_text = translator.translate(text_to_translate, dest="es")
+    # Prints the translated text
+    print(translated_text.text)
 
-# write translation to the response.txt
-# I had to add encoding = utf-8 for it to work with certain languages, like Japanese for example
-with open('response.txt', 'w', encoding="utf-8") as f:
-    f.write(translated_text.text)
+    # More supported languages can be found at https://py-googletrans.readthedocs.io/en/latest/, just scroll down!
+
+    # write translation to the response.txt
+    # I had to add encoding = utf-8 for it to work with certain languages, like Japanese for example
+    with open('response.txt', 'w', encoding="utf-8") as f:
+        f.write(translated_text.text)
+
+    f.close()
+    a.close()
+
+    sleep(20)
 
