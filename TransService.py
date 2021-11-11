@@ -11,16 +11,6 @@ from time import sleep
 
 # I used official information from the makers of google trans at https://py-googletrans.readthedocs.io/en/latest/
 
-""" 
-# OUTLINE FOR CODE, THIS IS THE MOST BASIC FORM OF MY SERVICE :) !
-translator = Translator()
-
-phrase = '''yo what's up'''
-result = translator.translate(phrase, dest="ja")
-
-print(result.text)
-"""
-
 request_file = "request.txt"
 response_file = "response.txt"
 
